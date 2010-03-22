@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Animals">
+		<message>
+			
+		</message>
+	</layout>
+	<state>
+		<name>Species</name>
+		<description></description>
+		<url>
+			<param name="filter_species" type="list" label="Species" description="">
+				<option value="0">All</option>
+				<option value="Dog">Dog</option>
+				<option value="Cat">Cat</option>
+			</param>
+
+			<param name="filter_adoption_status" type="list" label="Adoption Status" description="">
+				<option value="Pending">Pending</option>
+				<option value="Saved">Saved</option>
+				<option value="PTS">PTS</option>
+			</param>
+				
+		</url>
+		<params>
+			<param name="show_species" type="radio" default="1" label="show_species" description=""><option value="0">No</option><option value="1">Yes</option></param>
+			<param name="show_real_time_need" type="radio" default="1" label="show_real_time_need" description=""><option value="0">No</option><option value="1">Yes</option></param>
+			<param name="show_real_time_status" type="radio" default="1" label="show_real_time_status" description=""><option value="0">No</option><option value="1">Yes</option></param>
+			<param name="show_available_date" type="radio" default="1" label="show_available_date" description=""><option value="0">No</option><option value="1">Yes</option></param>
+			<param name="show_pull_by_date" type="radio" default="1" label="show_pull_by_date" description=""><option value="0">No</option><option value="1">Yes</option></param>
+			<param name="show_created" type="radio" default="1" label="show_created" description=""><option value="0">No</option><option value="1">Yes</option></param>
+		</params>
+		
+	</state>
+</metadata>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0" method="upgrade">
+	<name>ARCNA Animals</name>
+	<author>Phil Snell</author>
+	<authorEmail>phil@snellcode.com</authorEmail>
+	<authorUrl>http://snellcode.com</authorUrl>
+	<creationDate>February 14, 2010</creationDate>
+	<copyright>Copyright (C) 2010 Phil Snell - All rights reserved.</copyright>
+	<version>0.0.1</version>
+	<license>GNU / GPL</license>
+	<description><![CDATA[ARCNA database of animals]]></description>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">install.sql</file>
+		</sql>
+	</install>
+
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>arcnaanimals.php</filename>
+		<filename>controller.php</filename>
+		<filename>router.php</filename>
+		<folder>views</folder>
+	</files>
+
+	<administration>
+		<menu>ARCNA Animals</menu>
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>arcnaanimals.php</filename>
+			<filename>install.sql</filename>
+			<filename>controller.php</filename>
+			<filename>en-GB.com_arcnaanimals.ini</filename>
+			<folder>helpers</folder>
+			<folder>controllers</folder>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+                <languages folder="admin">
+                        <language tag="en-GB">en-GB.com_arcnaanimals.ini</language>
+                </languages>
+
+	</administration>
+</install>

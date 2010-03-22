@@ -1,0 +1,1180 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class Thumbnail</title>
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+			<style>
+				a { color: #336699; text-decoration: none; }
+				a:hover { color: #6699CC; text-decoration: underline; }
+				a:active { color: #6699CC; text-decoration: underline; }
+				
+				body { background : #FFFFFF; }
+				body, table { font-family: Georgia, Times New Roman, Times, serif; font-size: 10pt }
+				p, li { line-height: 140% }
+				a img { border: 0px; }
+				dd { margin-left: 0px; padding-left: 1em; }
+				
+				/* Page layout/boxes */
+				
+				.info-box {}
+				.info-box-title { margin: 1em 0em 0em 0em; padding: .25em; font-weight: normal; font-size: 14pt; border: 2px solid #999999; background-color: #CCCCFF }
+				.info-box-body { border: 1px solid #999999; padding: .5em; }
+				.nav-bar { font-size: 8pt; white-space: nowrap; text-align: right; padding: .2em; margin: 0em 0em 1em 0em; }
+				
+				.oddrow { background-color: #F8F8F8; border: 1px solid #AAAAAA; padding: .5em; margin-bottom: 1em}
+				.evenrow { border: 1px solid #AAAAAA; padding: .5em; margin-bottom: 1em}
+				
+				.page-body { max-width: 800px; margin: auto; }
+				.tree dl { margin: 0px }
+				
+				/* Index formatting classes */
+				
+				.index-item-body { margin-top: .5em; margin-bottom: .5em}
+				.index-item-description { margin-top: .25em }
+				.index-item-details { font-weight: normal; font-style: italic; font-size: 8pt }
+				.index-letter-section { background-color: #EEEEEE; border: 1px dotted #999999; padding: .5em; margin-bottom: 1em}
+				.index-letter-title { font-size: 12pt; font-weight: bold }
+				.index-letter-menu { text-align: center; margin: 1em }
+				.index-letter { font-size: 12pt }
+				
+				/* Docbook classes */
+				
+				.description {}
+				.short-description { font-weight: bold; color: #666666; }
+				.tags {	padding-left: 0em; margin-left: 3em; color: #666666; list-style-type: square; }
+				.parameters {	padding-left: 0em; margin-left: 3em; font-style: italic; list-style-type: square; }
+				.redefinitions { font-size: 8pt; padding-left: 0em; margin-left: 2em; }
+				.package {  }
+				.package-title { font-weight: bold; font-size: 14pt; border-bottom: 1px solid black }
+				.package-details { font-size: 85%; }
+				.sub-package { font-weight: bold; font-size: 120% }
+				.tutorial { border-width: thin; border-color: #0066ff }
+				.tutorial-nav-box { width: 100%; border: 1px solid #999999; background-color: #F8F8F8; }
+				.nav-button-disabled { color: #999999; }
+				.nav-button:active, 
+				.nav-button:focus, 
+				.nav-button:hover { background-color: #DDDDDD; outline: 1px solid #999999; text-decoration: none }
+				.folder-title { font-style: italic }
+				
+				/* Generic formatting */
+				
+				.field { font-weight: bold; }
+				.detail { font-size: 8pt; }
+				.notes { font-style: italic; font-size: 8pt; }
+				.separator { background-color: #999999; height: 2px; }
+				.warning {  color: #FF6600; }
+				.disabled { font-style: italic; color: #999999; }
+				
+				/* Code elements */
+				
+				.line-number {  }
+				
+				.class-table { width: 100%; }
+				.class-table-header { border-bottom: 1px dotted #666666; text-align: left}
+				.class-name { color: #000000; font-weight: bold; }
+				
+				.method-summary { padding-left: 1em; font-size: 8pt }
+				.method-header { }
+				.method-definition { margin-bottom: .3em }
+				.method-title { font-weight: bold; }
+				.method-name { font-weight: bold; }
+				.method-signature { font-size: 85%; color: #666666; margin: .5em 0em }
+				.method-result { font-style: italic; }
+				
+				.var-summary { padding-left: 1em; font-size: 8pt; }
+				.var-header { }
+				.var-title { margin-bottom: .3em }
+				.var-type { font-style: italic; }
+				.var-name { font-weight: bold; }
+				.var-default {}
+				.var-description { font-weight: normal; color: #000000; }
+				
+				.include-title {  }
+				.include-type { font-style: italic; }
+				.include-name { font-weight: bold; }
+				
+				.const-title {  }
+				.const-name { font-weight: bold; }
+				
+				/* Syntax highlighting */
+				
+				.src-code {  border: 1px solid #336699; padding: 1em; background-color: #EEEEEE; }
+				
+				.src-comm { color: green; }
+				.src-id {  }
+				.src-inc { color: #0000FF; }
+				.src-key { color: #0000FF; }
+				.src-num { color: #CC0000; }
+				.src-str { color: #66cccc; }
+				.src-sym { font-weight: bold; }
+				.src-var { }
+				
+				.src-php { font-weight: bold; }
+				
+				.src-doc { color: #009999 }
+				.src-doc-close-template { color: #0000FF }
+				.src-doc-coretag { color: #0099FF; font-weight: bold }
+				.src-doc-inlinetag { color: #0099FF }
+				.src-doc-internal { color: #6699cc }
+				.src-doc-tag { color: #0080CC }
+				.src-doc-template { color: #0000FF }
+				.src-doc-type { font-style: italic }
+				.src-doc-var { font-style: italic }
+				
+				/* tutorial */
+				
+				.authors {  }
+				.author { font-style: italic; font-weight: bold }
+				.author-blurb { margin: .5em 0em .5em 2em; font-size: 85%; font-weight: normal; font-style: normal }
+				.example { border: 1px dashed #999999; background-color: #EEEEEE; padding: .5em }
+				.listing { border: 1px dashed #999999; background-color: #EEEEEE; padding: .5em; white-space: nowrap }
+				.release-info { font-size: 85%; font-style: italic; margin: 1em 0em }
+				.ref-title-box {  }
+				.ref-title {  }
+				.ref-purpose { font-style: italic; color: #666666 }
+				.ref-synopsis {  }
+				.title { font-weight: bold; margin: 1em 0em 0em 0em; padding: .25em; border: 2px solid #999999; background-color: #CCCCFF  }
+				.cmd-synopsis { margin: 1em 0em }
+				.cmd-title { font-weight: bold }
+				.toc { margin-left: 2em; padding-left: 0em }			
+			</style>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class Thumbnail</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Thumbnail and Watermark 1.48</p>
+<p class="description"><p>This is a class that can process an image on the fly by either generate a thumbnail, apply an watermark to the image, or resize it.</p><p>The processed image can either be displayed in a page, saved to a file, or returned to a variable.  It requires the PHP with support for GD library extension in either version 1 or 2. If the GD library version 2 is available it the class can manipulate the images in true color, thus providing better quality of the results of resized images.  Features description: <ul><li>Thumbnail: normal thumbnail generation</li><li>Watermark: Text or image in PNG format. Suport multiples positions.</li><li>Auto-fitting: adjust the dimensions so that the resized image aspect is not distorted</li><li>Scaling: enlarge and shrink the image</li><li>Format: both JPEG and PNG are supported, but the watermark image can only be in PNG format as it needs to be transparent</li><li>Autodetect the GD library version supported by PHP</li><li>Calculate quality factor for a specific file size in JPEG format.</li><li>Suport bicubic resample algorithm</li><li>Generate unique filenames</li><li>Tested: PHP 4 valid</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">copyright:</span> GNU General Public License (GPL)</li>
+				<li><span class="field">version:</span> 1.48 &lt;2005/07/18&gt;</li>
+				<li><span class="field">author:</span> Emilio Rodriguez &lt;<a href="mailto:emiliort@gmail.com">mailto:emiliort@gmail.com</a>&gt;</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_1_47_Thumbnail_class_php.html">/Thumbnail.class.php</a> (line <span class="field">69</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+								<div class="var-title">
+					<span class="var-type">boolean</span>
+					<a href="#$allow_enlarge" title="details" class="var-name">$allow_enlarge</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">bool</span>
+					<a href="#$bicubic_resample" title="details" class="var-name">$bicubic_resample</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$error_msg" title="details" class="var-name">$error_msg</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$img_watermark" title="details" class="var-name">$img_watermark</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$img_watermark_Haling" title="details" class="var-name">$img_watermark_Haling</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$img_watermark_Valing" title="details" class="var-name">$img_watermark_Valing</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">integer</span>
+					<a href="#$jpeg_progressive" title="details" class="var-name">$jpeg_progressive</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$max_execution_time" title="details" class="var-name">$max_execution_time</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$memory_limit" title="details" class="var-name">$memory_limit</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$output_format" title="details" class="var-name">$output_format</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">integer</span>
+					<a href="#$quality" title="details" class="var-name">$quality</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$txt_watermark" title="details" class="var-name">$txt_watermark</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$txt_watermark_color" title="details" class="var-name">$txt_watermark_color</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">integer</span>
+					<a href="#$txt_watermark_font" title="details" class="var-name">$txt_watermark_font</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$txt_watermark_Haling" title="details" class="var-name">$txt_watermark_Haling</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">integer</span>
+					<a href="#$txt_watermark_Hmargin" title="details" class="var-name">$txt_watermark_Hmargin</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$txt_watermark_Valing" title="details" class="var-name">$txt_watermark_Valing</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">integer</span>
+					<a href="#$txt_watermark_Vmargin" title="details" class="var-name">$txt_watermark_Vmargin</a>
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+								
+				<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#Thumbnail" title="details" class="method-name">Thumbnail</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$imgfile</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#CalculateQFactor" title="details" class="method-name">CalculateQFactor</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$size</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">mixed</span>
+										<a href="#dump" title="details" class="method-name">dump</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#gdVersion" title="details" class="method-name">gdVersion</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$user_ver</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#imageCopyResampleBicubic" title="details" class="method-name">imageCopyResampleBicubic</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$dst_img</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$src_img</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$dst_x</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$dst_y</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$src_x</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$src_y</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$dst_w</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$dst_h</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$src_w</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$src_h</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#imagemergealpha" title="details" class="method-name">imagemergealpha</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$i</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#process" title="details" class="method-name">process</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#save" title="details" class="method-name">save</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$save</span> = <span class="var-default">""</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#show" title="details" class="method-name">show</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#size" title="details" class="method-name">size</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$size_x</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$size_y</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#size_auto" title="details" class="method-name">size_auto</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$size</span> = <span class="var-default">100</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#size_height" title="details" class="method-name">size_height</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$size</span> = <span class="var-default">100</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#size_width" title="details" class="method-name">size_width</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$size</span> = <span class="var-default">100</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#unique_filename" title="details" class="method-name">unique_filename</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$archive_dir</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$file_prefix</span> = <span class="var-default">''</span>])
+									</div>
+							</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$allow_enlarge" id="$allow_enlarge"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$allow_enlarge</span>
+			 = <span class="var-default">false</span>			(line <span class="line-number">89</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> allow to enlarge the thumbnail.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$bicubic_resample" id="$bicubic_resample"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">bool</span>
+			<span class="var-name">$bicubic_resample</span>
+			 = <span class="var-default">false</span>			(line <span class="line-number">146</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> [OPTIONAL] set resample algorithm to bicubic</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$error_msg" id="$error_msg"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$error_msg</span>
+			 = <span class="var-default">''</span>			(line <span class="line-number">164</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> errors mensage</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$img_watermark" id="$img_watermark"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$img_watermark</span>
+			 = <span class="var-default">''</span>			(line <span class="line-number">95</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> [OPTIONAL] set watermark source file, only PNG format [RECOMENDED ONLY WITH GD 2 ]</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$img_watermark_Haling" id="$img_watermark_Haling"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$img_watermark_Haling</span>
+			 = <span class="var-default">'LEFT'</span>			(line <span class="line-number">105</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> [OPTIONAL] set watermark horizonatal position, LEFT | CENTER | RIGHT</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$img_watermark_Valing" id="$img_watermark_Valing"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$img_watermark_Valing</span>
+			 = <span class="var-default">'TOP'</span>			(line <span class="line-number">100</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> [OPTIONAL] set watermark vertical position, TOP | CENTER | BOTTOM</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$jpeg_progressive" id="$jpeg_progressive"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$jpeg_progressive</span>
+						(line <span class="line-number">84</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> set JPEG output format to progressive JPEG : 0 = no , 1 = yes</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$max_execution_time" id="$max_execution_time"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$max_execution_time</span>
+			 = <span class="var-default">'30'</span>			(line <span class="line-number">158</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> [OPTIONAL] set maximun execution time, default 30 seconds ('30'). (use '60' for big images)</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$memory_limit" id="$memory_limit"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$memory_limit</span>
+			 = <span class="var-default">'32M'</span>			(line <span class="line-number">152</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> [OPTIONAL] set maximun memory usage, default 8 MB ('8M'). (use '16M' for big images)</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$output_format" id="$output_format"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$output_format</span>
+			 = <span class="var-default">'JPG'</span>			(line <span class="line-number">79</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> output format, default JPG, valid values 'JPG' | 'PNG'</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$quality" id="$quality"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$quality</span>
+			 = <span class="var-default">75</span>			(line <span class="line-number">74</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Quality factor for JPEG output format, default 75</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$txt_watermark" id="$txt_watermark"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$txt_watermark</span>
+			 = <span class="var-default">''</span>			(line <span class="line-number">111</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> [OPTIONAL] set watermark text [RECOMENDED ONLY WITH GD 2 ]</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$txt_watermark_color" id="$txt_watermark_color"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$txt_watermark_color</span>
+			 = <span class="var-default">'000000'</span>			(line <span class="line-number">116</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> [OPTIONAL] set watermark text color , RGB Hexadecimal[RECOMENDED ONLY WITH GD 2 ]</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$txt_watermark_font" id="$txt_watermark_font"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$txt_watermark_font</span>
+			 = <span class="var-default">1</span>			(line <span class="line-number">121</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> [OPTIONAL] set watermark text font: 1,2,3,4,5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$txt_watermark_Haling" id="$txt_watermark_Haling"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$txt_watermark_Haling</span>
+			 = <span class="var-default">'LEFT'</span>			(line <span class="line-number">131</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> [OPTIONAL] set watermark text horizonatal position, LEFT | CENTER | RIGHT</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$txt_watermark_Hmargin" id="$txt_watermark_Hmargin"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$txt_watermark_Hmargin</span>
+			 = <span class="var-default">10</span>			(line <span class="line-number">136</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> [OPTIONAL] set watermark text horizonatal margin in pixels</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$txt_watermark_Valing" id="$txt_watermark_Valing"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$txt_watermark_Valing</span>
+			 = <span class="var-default">'TOP'</span>			(line <span class="line-number">126</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> [OPTIONAL] set watermark text vertical position, TOP | CENTER | BOTTOM</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$txt_watermark_Vmargin" id="$txt_watermark_Vmargin"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$txt_watermark_Vmargin</span>
+			 = <span class="var-default">10</span>			(line <span class="line-number">141</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> [OPTIONAL] set watermark text vertical margin in pixels</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodThumbnail" id="Thumbnail"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor Thumbnail</span> (line <span class="line-number">179</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">open source image</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			Thumbnail
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$imgfile</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$imgfile</span><span class="var-description">: filename of the source image file</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodCalculateQFactor" id="CalculateQFactor"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">CalculateQFactor</span> (line <span class="line-number">410</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Calculate JPEG quality factor for a specific size in bytes</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			CalculateQFactor
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$size</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$size</span><span class="var-description">: maximun file size in bytes</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methoddump" id="dump"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">dump</span> (line <span class="line-number">313</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">return the result thumbnail</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			dump
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodgdVersion" id="gdVersion"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">gdVersion</span> (line <span class="line-number">546</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get which version of GD is installed, if any.</p>
+<p class="description"><p>Returns the version (1 or 2) of the GD extension.</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			gdVersion
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$user_ver</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="methodimageCopyResampleBicubic" id="imageCopyResampleBicubic"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">imageCopyResampleBicubic</span> (line <span class="line-number">582</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			imageCopyResampleBicubic
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$dst_img</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$src_img</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$dst_x</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$dst_y</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$src_x</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$src_y</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$dst_w</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$dst_h</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$src_w</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$src_h</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="methodimagemergealpha" id="imagemergealpha"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">imagemergealpha</span> (line <span class="line-number">676</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">NOT USED : to do: mezclar imagenes a tamaño original, preservar canal alpha y redimensionar</p>
+<p class="description"><p>Merge multiple images and keep transparency  $i is and array of the images to be merged:  $i[1] will be overlayed over $i[0]  $i[2] will be overlayed over that</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			imagemergealpha
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$i</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$i</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodprocess" id="process"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">process</span> (line <span class="line-number">344</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">generate image</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			process
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodsave" id="save"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">save</span> (line <span class="line-number">324</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">save your thumbnail to file</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			save
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$save</span> = <span class="var-default">""</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$save</span><span class="var-description">: output file name</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodshow" id="show"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">show</span> (line <span class="line-number">297</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">show your thumbnail, output image and headers</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			show
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodsize" id="size"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">size</span> (line <span class="line-number">282</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">set the biggest width and height for thumbnail</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			size
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$size_x</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$size_y</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$size_x</span><span class="var-description">: width</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$size_y</span><span class="var-description">: height</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodsize_auto" id="size_auto"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">size_auto</span> (line <span class="line-number">265</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">set the biggest width or height for thumbnail</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			size_auto
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$size</span> = <span class="var-default">100</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$size</span><span class="var-description">: width or height</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodsize_height" id="size_height"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">size_height</span> (line <span class="line-number">212</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">set height for thumbnail</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			size_height
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$size</span> = <span class="var-default">100</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$size</span><span class="var-description">: height</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodsize_width" id="size_width"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">size_width</span> (line <span class="line-number">239</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">set width for thumbnail</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			size_width
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$size</span> = <span class="var-default">100</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$size</span><span class="var-description">: width</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodunique_filename" id="unique_filename"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">unique_filename</span> (line <span class="line-number">634</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">generate a unique filename in a directory like prefix_filename_randon.ext</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> full path of the file to save. Exmaple '/img/picture_my_foto_94949.jpg'</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			unique_filename
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$archive_dir</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$file_prefix</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$archive_dir</span><span class="var-description">: path of the destination dir. Example '/img'</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filename</span><span class="var-description">: name of the file to save. Example 'my_foto.jpg'</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file_prefix</span><span class="var-description">: [optional] prefix of the name Example 'picture'</span>			</li>
+				</ul>
+		
+		
+	</div>
+						
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 18 Jul 2005 15:02:34 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.2.3</a>
+	</p>
+	</div></body>
+</html>
