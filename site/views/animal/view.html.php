@@ -44,6 +44,9 @@ class ARCNAAnimalsViewAnimal extends JView {
 			return false;
 		}
 			
+		// extra fields in params
+		$file 	= JPATH_COMPONENT_ADMINISTRATOR.DS.'models'.DS.'animal.xml';
+		$params = new JParameter( $item->params, $file );
 		
 		// assign variables to template
 		$this->assignRef( 'item', $item );
@@ -53,6 +56,7 @@ class ARCNAAnimalsViewAnimal extends JView {
 		$this->assignRef( 'user', $user );
 		$this->assignRef( 'orderingQuery', $orderingQuery );
 		$this->assignRef('table',$table);
+		$this->assignRef('params',		$params);
 		
 		// display template
 

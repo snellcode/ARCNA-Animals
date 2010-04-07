@@ -119,8 +119,15 @@ $doc->addScriptDeclaration("
 	</div>
 	<div class="col width-50">
 	<table class="admintable">
-
+	
+	<tr>
+	<td colspan="2">
+		<?php echo $this->params->render(); ?>
+	</td>
+	</tr>
+	
 	<?php
+	
 	echo JHTML::_('arcna.admintablerow', 'textarea', 'comments', $this->item->comments );
 	echo JHTML::_('arcna.admintablerow', 'textarea', 'special_needs', $this->item->special_needs );
 	echo JHTML::_('arcna.admintablerow', 'textarea', 'behavior_evaluation', $this->item->behavior_evaluation );

@@ -47,7 +47,7 @@ class TableAnimals extends JTable
 			'real_time_need'=> array( 'Rescue','Foster','Adoption','Transport'),
 			'real_time_status'=>array( 'Urgent', 'OOS' ),
 			'adoption_status'=>array('Pending','Saved','PTS'),
-			'location_state'=>array('AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY')
+			'location_state'=>array('AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY','Ont','Que','N. S.','N. B.','Man','B. C.','P. E. I.','Sask','Alb','Nfld., Lab.','N. T.','Y. T.','Nunvt')
 		);
 		
 		return $array;
@@ -105,8 +105,7 @@ class TableAnimals extends JTable
 	{
 		$requiredFields = array( 'name', 'species', 'breed', 'age', 'gender', 'color', 'altered', 
 		  'location_state', 'location_city', 'shelter_name', 'adoption_status', 'real_time_need', 
-		  'real_time_status', 'available_date', 'pull_by_date', 'contact_name', 
-		  'contact_email' );	
+		  'real_time_status', 'contact_name', 'contact_email' );	
 		return $requiredFields;
 	}
 	

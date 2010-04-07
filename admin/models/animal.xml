@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<model>
+	<params>
+		<param name="link_to_video" type="text" default="" label="Link to Video" description="" />
+		<param name="link_to_facebook_posting" type="text" default="" label="Link to Facebook Posting" description="" />
+	</params>
+</model>

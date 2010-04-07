@@ -188,6 +188,12 @@ $doc->addScriptDeclaration("
 
 	?>
 
+	<tr>
+	<td colspan="2">
+		<?php echo $this->params->render(); ?>
+	</td>
+	</tr>
+	
 	<?php
 	echo JHTML::_($method, 'textarea', 'comments', $this->item->comments );
 	echo JHTML::_($method, 'textarea', 'special_needs', $this->item->special_needs );

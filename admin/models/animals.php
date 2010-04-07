@@ -281,7 +281,7 @@ class ARCNAAnimalsModelAnimals extends JModel {
 		$fields = $table->getFields();
 
 		foreach( $fields as $field ) {
-			if( $field->Type == 'text' ) {
+			if( $field->Type == 'text' && $field->Field != 'params' ) {
 				$name = $field->Field;
 				$table->$name = JRequest::getVar( $name, '', 'post', 'string', JREQUEST_ALLOWHTML );
 			}

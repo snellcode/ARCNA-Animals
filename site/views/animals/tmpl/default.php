@@ -281,7 +281,17 @@ $doc->addStyleDeclaration("
 			</td>
 			
 			<td align="center">
-				<?php echo $item->id; ?>
+				<?php
+				if ( $isCheckedOut ) {
+					echo $this->escape($item->id);
+				} else {
+				?>
+				<span class="editlinktip hasTip" title="<?php echo JText::_( 'Edit Item' );?>::<?php echo $this->escape($item->name); ?>">
+					<h1><a href="<?php echo $url; ?>"><?php echo $this->escape($item->id); ?></a></h1>
+				</span>
+				<?php
+				}
+				?>
 			</td>
 
 			<?php if( $this->params->get('show_species', 1 ) ) : ?>

@@ -29,13 +29,17 @@ class ARCNAAnimalsViewAnimal extends JView {
 		$editor = &JFactory::getEditor();
 		$orderingQuery = $this->get('OrderingQuery');
 
-			
+		// extra fields in params
+		$file 	= JPATH_COMPONENT_ADMINISTRATOR.DS.'models'.DS.'animal.xml';
+		$params = new JParameter( $item->params, $file );
+		
 		// assign variables to template
 		$this->assignRef( 'item', $item );
 		$this->assignRef( 'fields', $fields );
 		$this->assignRef( 'requiredFields', $requiredFields );
 		$this->assignRef( 'editor', $editor );
 		$this->assignRef( 'orderingQuery', $orderingQuery );
+		$this->assignRef('params',		$params);
 		
 		// display template
 		parent::display( $tpl );
